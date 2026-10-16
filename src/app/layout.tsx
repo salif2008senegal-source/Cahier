@@ -6,6 +6,7 @@ import EnregistreurSW from "@/src/components/EnregistreurSW";
 import { FournisseurAuth } from "@/src/components/FournisseurAuth";
 import { FournisseurCahier } from "@/src/components/FournisseurCahier";
 import GardeAcces from "@/src/components/GardeAcces";
+import InstallerApp from "@/src/components/InstallerApp";
 import ToastCahier from "@/src/components/ToastCahier";
 import "./globals.css";
 
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </FournisseurCahier>
         </FournisseurAuth>
         <EnregistreurSW />
+        <InstallerApp />
       </body>
     </html>
   );

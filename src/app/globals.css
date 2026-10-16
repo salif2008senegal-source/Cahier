@@ -1127,3 +1127,79 @@ html {
 .onglet__icone {
   width: 52px;
 }
+/* ---------- Proposition d'installation de l'application ---------- */
+.installer {
+  position: fixed;
+  top: calc(10px + env(safe-area-inset-top));
+  left: 0;
+  right: 0;
+  z-index: 80;
+  display: flex;
+  justify-content: center;
+  padding: 0 12px;
+  pointer-events: none;
+}
+.installer__carte {
+  pointer-events: auto;
+  width: 100%;
+  max-width: 456px;
+  padding: 14px;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 24px 50px -14px rgba(5, 15, 50, 0.55), 0 0 0 1px rgba(14, 26, 51, 0.06);
+  animation: descendre 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.installer__haut {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.installer__icone {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--b50);
+  flex: none;
+}
+.installer__titre {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--b900);
+}
+.installer__texte {
+  margin-top: 2px;
+  color: var(--gris);
+  font-size: 0.9rem;
+}
+.installer__actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+.installer__guide {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--b50);
+  color: var(--b900);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.installer .btn {
+  min-height: 52px;
+  padding: 0 12px;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.installer__guide + .btn {
+  margin-top: 10px;
+}
+
+@keyframes descendre {
+  from { transform: translateY(-24px); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
